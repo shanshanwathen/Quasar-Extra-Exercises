@@ -92,7 +92,7 @@ console.log(analyzeColorSwitch('green'));
  */
 
 var userColor = prompt("What is your favorite color?");
-// alert(analyzeColor(userColor));
+alert(analyzeColor(userColor));
 alert(analyzeColorSwitch(userColor));
 
 /* ########################################################################## */
@@ -142,6 +142,10 @@ function calculateTotal(number, totalAmount) {
     return pay;
 }
 
+console.log(calculateTotal(0, 100));
+console.log(calculateTotal(4, 100));
+console.log(calculateTotal(5, 100));
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -150,7 +154,11 @@ function calculateTotal(number, totalAmount) {
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+var totalBill = Number(prompt("Hello, what's your total bill?"));
+alert("Congrats, you lucky number is " + luckyNumber);
+alert("Your total bill before the discount was $" + totalBill);
+alert("So your price after the discount is $" + calculateTotal(luckyNumber, totalBill));
 
 /**
  * TODO:
@@ -168,3 +176,78 @@ function calculateTotal(number, totalAmount) {
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+var isEnter = confirm("Would you like to enter a number?");
+if (isEnter) {
+    var userInput = prompt("Great, please enter a number.");
+
+    if (!Number(userInput)) {
+        alert("Are you kidding me? That was NOT a number!!!");
+    } else {
+        userInput = Number(userInput);
+        if (userInput % 2 === 0) {
+            alert(userInput + " is even");
+        } else {
+            alert(userInput + " is odd");
+        }
+
+        alert(userInput + " plus 100 is " + (userInput + 100));
+        if (userInput > 0) {
+            alert(userInput + " is positive");
+        } else if (userInput < 0) {
+            alert(userInput + " is negative");
+        }
+    }
+}
+
+function isEven(number) {
+    if (number % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function addHundred(number) {
+    return number + 100;
+}
+
+function isPositive(number) {
+    if (number > 0) {
+        return "positive";
+    } else if (number < 0) {
+        return "negative";
+    } else {
+        return "not positive nor negative";
+    }
+}
+
+function isNumber(input) {
+    if (isNaN(input)) {
+        return "not a number";
+    } else {
+        return true;
+    }
+}
+
+if (isEnter) {
+    var userInput = prompt("Great, please enter a number.");
+
+    if (isNumber(userInput) === "not a number") {
+        alert("Are you kidding me? That was NOT a number!!!");
+    } else {
+        userInput = Number(userInput);
+        if (isEven(userInput)) {
+            alert(userInput + " is even");
+        } else {
+            alert(userInput + " is odd");
+        }
+
+        alert(userInput + " plus 100 is " + addHundred(userInput));
+
+        if (isPositive(userInput) === "positive") {
+            alert(userInput + " is positive");
+        } else if (isPositive(userInput) === "negative") {
+            alert(userInput + " is negative");
+        }
+    }
+}
