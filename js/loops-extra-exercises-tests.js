@@ -62,42 +62,6 @@ describe('addUp', function () {
     });
 });
 
-
-
-// Convert a Number to Base-2
-describe('binary', function() {
-    it('should be a defined function', function () {
-        expect(typeof binary).toBe('function');
-    });
-    it('should return a string when executed', function () {
-        expect(typeof binary(randomPositiveNumber)).toBe('string');
-    });
-    it('should return "1100100" when passed in 100', function () {
-        expect(binary(100)).toBe('1100100');
-    });
-    it('should return "1" when passed in 1', function () {
-        expect(binary(1)).toBe('1');
-    });
-    it('should return "0" when passed in 0', function () {
-        expect(binary(0)).toBe('0');
-    });
-    it('should return "1000101" when passed in 69', function () {
-        expect(binary(69)).toBe('1000101');
-    });
-    it('should return "1111111111" when passed in 1023', function () {
-        expect(binary(1023)).toBe('1111111111');
-    });
-    it('should return "111111111" when passed in 511', function () {
-        expect(binary(511)).toBe('111111111');
-    });
-    it('should return "1010011010" when passed in 666', function () {
-        expect(binary(666)).toBe('1010011010');
-    });
-    it('should return "1111011" when passed in 123', function () {
-        expect(binary(123)).toBe('1111011');
-    });
-});
-
 // Count Instances of a Character in a String
 describe('charCount', function() {
     it('should be a defined function', function() {
@@ -253,5 +217,39 @@ describe('reverseOdd', function () {
     });
     it('should return "ddO ddo ddo ddo ddo ddo ddo ddo ddo ddo ddo" when passed in "Odd odd odd odd odd odd odd odd odd odd odd"', function () {
         expect(reverseOdd('Odd odd odd odd odd odd odd odd odd odd odd')).toBe('ddO ddo ddo ddo ddo ddo ddo ddo ddo ddo ddo');
+    });
+});
+
+// Convert a Number to Base-2
+describe('binary', function() {
+    it('should be a defined function', function () {
+        expect(typeof binary).toBe('function');
+    });
+    it('should return a string when executed', function () {
+        expect(typeof binary(randomPositiveNumber)).toBe('string');
+    });
+    it('should return "1100100" when passed in 100', function () {
+        expect(binary(100)).toBe('1100100');
+    });
+    it('should return "1" when passed in 1', function () {
+        expect(binary(1)).toBe('1');
+    });
+    it('should return "0" when passed in 0', function () {
+        expect(binary(0)).toBe('0');
+    });
+    it('should return "1000101" when passed in 69', function () {
+        expect(binary(69)).toBe('1000101');
+    });
+    it('should return "1111111111" when passed in 1023', function () {
+        expect(binary(1023)).toBe('1111111111');
+    });
+    it('should return "111111111" when passed in 511', function () {
+        expect(binary(511)).toBe('111111111');
+    });
+    it('should return "1010011010" when passed in 666', function () {
+        expect(binary(666)).toBe('1010011010');
+    });
+    it('should return "1111011" when passed in 123', function () {
+        expect(binary(123)).toBe('1111011');
     });
 });
