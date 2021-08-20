@@ -51,8 +51,8 @@ describe('addUp', function () {
     it('should return 1 when passed in 1', function () {
         expect(addUp(1)).toBe(1);
     });
-    it('should return 499500 when passed in 99', function () {
-        expect(addUp(99)).toBe(499500);
+    it('should return 499500 when passed in 999', function () {
+        expect(addUp(999)).toBe(499500);
     });
     it('should return 15400 when passed in 175', function () {
         expect(addUp(175)).toBe(15400);
