@@ -118,3 +118,153 @@
  * Notes
  * Return an empty array if the object is empty.
  */
+
+
+/**
+ * Array of Multiples
+ * Create a function named arrayOfMultiples that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
+ *
+ * Examples
+ *
+ * >> arrayOfMultiples(7, 5) ➞ [7, 14, 21, 28, 35]
+ * >> arrayOfMultiples(12, 10) ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+ * >> arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
+ *
+ * Notes
+ * Notice that num is also included in the returned array.
+ */
+
+
+/**
+ * Get Sum of People's Budget
+ * Create the function named getBudgets that takes an array with objects and returns the sum of people's budgets.
+ *
+ * Examples
+ *
+ * >> getBudgets([
+ *        { name: "John", age: 21, budget: 23000 },
+ *        { name: "Steve",  age: 32, budget: 40000 },
+ *        { name: "Martin",  age: 16, budget: 2700 }
+ *    ]) ➞ 65700
+ * >> getBudgets([
+ *        { name: "John",  age: 21, budget: 29000 },
+ *        { name: "Steve",  age: 32, budget: 32000 },
+ *        { name: "Martin",  age: 16, budget: 1600 }
+ *    ]) ➞ 62600
+ */
+
+
+/**
+ * Special Arrays
+ * An array is special if every even index contains an even number and every odd index contains an odd number.
+ * Create a function named isSpecialArray that returns true if an array is special, and false otherwise.
+ *
+ * Examples
+ *
+ * >> isSpecialArray([2, 7, 4, 9, 6, 1, 6, 3]) ➞ true
+ *    // Even indices: [2, 4, 6, 6]; Odd indices: [7, 9, 1, 3]
+ * >> isSpecialArray([2, 7, 9, 1, 6, 1, 6, 3]) ➞ false
+ *    // Index 2 has an odd number 9.
+ * >> isSpecialArray([2, 7, 8, 8, 6, 1, 6, 3]) ➞ false
+ *    // Index 3 has an even number 8.
+ */
+
+
+/**
+ * Remove Duplicates from an Array
+ * Create a function named removeDuplicates that takes an array of items, removes all duplicate items and returns a new array in the same sequential order as the old array (minus duplicates).
+ *
+ * Examples
+ * >> removeDuplicates([1, 0, 1, 0]) ➞ [1, 0]
+ * >> removeDuplicates(["The", "big", "cat"]) ➞ ["The", "big", "cat"]
+ * >> removeDuplicates(["John", "Taylor", "John"]) ➞ ["John", "Taylor"]
+ *
+ * Notes
+ * Tests contain arrays with both strings and numbers.
+ * Tests are case sensitive.
+ * Each array item is unique.
+ */
+
+
+/**
+ * Lowercase and Uppercase Map
+ * Create a function named mapping that creates an object with each (key, value) pair being the (lower case, upper case) versions of a letter, respectively.
+ *
+ * Examples
+ *
+ * >> mapping(["p", "s"]) ➞ { "p": "P", "s": "S" }
+ * >> mapping(["a", "b", "c"]) ➞ { "a": "A", "b": "B", "c": "C" }
+ * >> mapping(["a", "v", "y", "z"]) ➞ { "a": "A", "v": "V", "y": "Y", "z": "Z" }
+ *
+ * Notes
+ * All of the letters in the input list will always be lowercase.
+ */
+
+
+/**
+ * Can You Spare a Square?
+ * Try to imagine a world in which you might have to stay home for 14 days at any given time. Do you have enough TP to make it through?
+ *
+ * Although the number of squares per roll of TP varies significantly, we'll assume each roll has 500 sheets, and the average person uses 57 sheets per day.
+ *
+ * Create a function named tpChecker that will receive an object with two key/values:
+ *
+ *   people — Number of people in the household.
+ *   tp — Number of rolls.
+ *
+ * Return a statement telling the user if they need to buy more TP!
+ *
+ * Examples
+ *
+ * >> tpChecker({ people: 4, tp: 1 }) ➞ "Your TP will only last 2 days, buy more!"
+ * >> tpChecker({ people: 3, tp: 20 }) ➞ "Your TP will last 58 days, no need to panic!"
+ * >> tpChecker({ people: 4, tp: 12 }) ➞ "Your TP will last 26 days, no need to panic!"
+ */
+
+
+/**
+ * Get Student Top Notes
+ * Create a function named getStudentTopNotes that takes an array of students and returns an array of their top notes.
+ * If the student does not have notes then let's assume their top note is equal to 0.
+ *
+ * Examples
+ *
+ * >> getStudentTopNotes([
+ *      {
+ *         id: 1,
+ *         name: "Jacek",
+ *         notes: [5, 3, 4, 2, 5, 5]
+ *       },
+ *      {
+ *         id: 2,
+ *         name: "Ewa",
+ *         notes: [2, 3, 3, 3, 2, 5]
+ *       },
+ *      {
+ *         id: 3,
+ *         name: "Zygmunt",
+ *         notes: [2, 2, 4, 4, 3, 3]
+ *       }
+ *    ]) ➞ [5, 5, 4]
+ */
+
+
+/**
+ * The Frugal Gentleman
+ * Atticus has been invited to a dinner party, and he decides to purchase a bottle of wine. However, he has little knowledge of how to choose a good bottle. Being a very frugal gentleman (yet disliking looking like a cheapskate), he decides to use a very simple rule. In any selection of two or more wines, he will always buy the second-cheapest.
+ *
+ * Given an array of wine objects, write a function named chosenWine that returns the name of the wine he will buy for the party. If given an empty array, return null. If given an array of only one, Atticus will buy that wine.
+ *
+ * Examples
+ *
+ * >> chosenWine([
+ *        { name: "Wine A", price: 8.99 },
+ *        { name: "Wine 32", price: 13.99 },
+ *        { name: "Wine 9", price: 10.99 }
+ *    ]) ➞ "Wine 9"
+ * >> chosenWine([{ name: "Wine A", price: 8.99 }]) ➞ "Wine A"
+ * >> chosenWine([]) ➞ null
+ *
+ * Notes
+ * All wines will be different prices, so there is no confusion in the ordering.
+ */
