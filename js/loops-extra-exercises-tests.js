@@ -77,7 +77,7 @@ describe('charCount', function() {
         expect(charCount('b', 'big fat bubble')).toBe(4);
     });
     it('should return 1 when passed in "c" and "Chamber of secrets"', function () {
-        expect(charCount('c')).toBe(1);
+        expect(charCount('c', 'Chamber of secrets')).toBe(1);
     });
     it('should return 7 when passed in "f" and "frank and his friends have offered five foxes for sale"', function () {
         expect(charCount('f', 'frank and his friends have offered five foxes for sale')).toBe(7);
