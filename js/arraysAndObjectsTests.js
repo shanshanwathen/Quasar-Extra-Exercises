@@ -134,16 +134,16 @@ const sorted2 = [
 ];
 describe('sortDrinkByPrice', function () {
     it('should be a defined function', function () {
-        expect(typeof 'sortDrinkByPrice').toBe('function');
+        expect(typeof sortDrinkByPrice).toBe('function');
     });
     it('should return an array when executed', function () {
         expect(Array.isArray(sortDrinkByPrice(drinks1))).toBe(true);
     });
     it('should return [{name: \'peach\', price: 23}, {name: \'lemonade\', price: 90}, {name: \'lime\', price: 432}] when passed in [{name: \'lemonade\', price: 90}, {name: \'lime\', price: 432}, {name: \'peach\', price: 23}]', function () {
-        expect(sortDrinksByPrice(drinks1)).toEqual(sorted1);
+        expect(sortDrinkByPrice(drinks1)).toEqual(sorted1);
     });
     it('should return [{name: \'lime\', price: 80}, {name: \'peach\', price: 90}, {name: \'water\', price: 120}] when passed in [{name: \'water\', price: 120}, {name: \'lime\', price: 80}, {name: \'peach\', price: 90}]', function () {
-        expect(sortDrinksByPrice(drinks2)).toEqual(sorted2);
+        expect(sortDrinkByPrice(drinks2)).toEqual(sorted2);
     });
 });
 
@@ -167,13 +167,13 @@ describe('maximumScore', function () {
         expect(maximumScore([{tile: 'N', score: 1}, {tile: 'K', score: 5},  {tile: 'Z', score: 10}, {tile: 'X', score: 8}, {tile: 'D', score: 2}, {tile: 'A', score: 1}, {tile: 'E', score: 1}])).toBe(28);
     });
     it('should return 15 when passed in [{tile: \'B\', score: 2}, {tile: \'V\', score: 4},  {tile: \'F\', score: 4}, {tile: \'U\', score: 1}, {tile: \'D\', score: 2}, {tile: \'O\', score: 1}, {tile: \'U\', score: 1}]', function () {
-        expect(maximunScore([{tile: 'B', score: 2}, {tile: 'V', score: 4},  {tile: 'F', score: 4}, {tile: 'U', score: 1}, {tile: 'D', score: 2}, {tile: 'O', score: 1}, {tile: 'U', score: 1}])).toBe(15);
+        expect(maximumScore([{tile: 'B', score: 2}, {tile: 'V', score: 4},  {tile: 'F', score: 4}, {tile: 'U', score: 1}, {tile: 'D', score: 2}, {tile: 'O', score: 1}, {tile: 'U', score: 1}])).toBe(15);
     });
     it('should return 18 when passed in [{tile: \'M\', score: 3}, {tile: \'Q\', score: 10},  {tile: \'O\', score: 1}, {tile: \'E\', score: 1}, {tile: \'E\', score: 1}, {tile: \'I\', score: 1}, {tile: \'A\', score: 1}]', function () {
-        expect(maximunScore([{tile: 'M', score: 3}, {tile: 'Q', score: 10},  {tile: 'O', score: 1}, {tile: 'E', score: 1}, {tile: 'E', score: 1}, {tile: 'I', score: 1}, {tile: 'A', score: 1}])).toBe(18);
+        expect(maximumScore([{tile: 'M', score: 3}, {tile: 'Q', score: 10},  {tile: 'O', score: 1}, {tile: 'E', score: 1}, {tile: 'E', score: 1}, {tile: 'I', score: 1}, {tile: 'A', score: 1}])).toBe(18);
     });
     it('should return 7 when passed in [{tile: \'A\', score: 1}, {tile: \'E\', score: 1},  {tile: \'O\', score: 1}, {tile: \'E\', score: 1}, {tile: \'E\', score: 1}, {tile: \'I\', score: 1}, {tile: \'A\', score: 1}]', function () {
-        expect(maximunScore([{tile: 'A', score: 1}, {tile: 'E', score: 1},  {tile: 'O', score: 1}, {tile: 'E', score: 1}, {tile: 'E', score: 1}, {tile: 'I', score: 1}, {tile: 'A', score: 1}])).toBe(7);
+        expect(maximumScore([{tile: 'A', score: 1}, {tile: 'E', score: 1},  {tile: 'O', score: 1}, {tile: 'E', score: 1}, {tile: 'E', score: 1}, {tile: 'I', score: 1}, {tile: 'A', score: 1}])).toBe(7);
     });
 });
 
