@@ -146,5 +146,74 @@
 
 /**
  * Online Shopping
+ * Create a function named freeShipping that determines whether a shopping order is eligible for free shipping. An order is eligible for free shipping if the total cost of items purchased exceeds $50.00.
  *
+ * Examples
+ *
+ * freeShipping({ Shampoo: 5.99, Rubber_Ducks: 15.99 }) ➞ false
+ * freeShipping({ Flatscreen_TV: 399.99 }) ➞ true
+ * freeShipping({ Monopoly: 11.99, Secret_Hitler: 35.99, Bananagrams: 13.99 }) ➞ true
+ *
+ * Notes
+ * Ignore tax or additional fees when calculating the total order cost.
  */
+
+
+/**
+ * How Good is Your Name?
+ * Create a function named nameScore that takes a string of name and checks how much good is the given name. A preloaded dictionary of alphabet scores is available below. Add up the letters of your name to get the total score.
+ *
+ * const scores = {"A": 100, "B": 14, "C": 9, "D": 28, "E": 145, "F": 12, "G": 3,
+ * "H": 10, "I": 200, "J": 100, "K": 114, "L": 100, "M": 25,
+ * "N": 450, "O": 80, "P": 2, "Q": 12, "R": 400, "S": 113,
+ * "T": 405, "U": 11, "V": 10, "W": 10, "X": 3, "Y": 210, "Z": 23}
+ *
+ * Return your result as per the following rules:
+ *
+ * score <= 60:   "NOT TOO GOOD"
+ * 61 <= score <= 300:  "PRETTY GOOD"
+ * 301 <= score <= 599:  "VERY GOOD"
+ * score >= 600:  "THE BEST"
+ *
+ * Examples
+ *
+ * nameScore("MUBASHIR") ➞ "THE BEST"
+ * nameScore("YOU") ➞ "VERY GOOD"
+ * nameScore("MATT") ➞ "THE BEST"
+ * nameScore("PUBG") ➞ "NOT TOO GOOD"
+ *
+ * Notes
+ * All names will be uppercase
+ */
+
+
+/**
+ * Burglary Series (06): Convert to Number
+ * You prepare a list to send to the insurance company. As you finish, you notice you misformatted it.
+ * Write a function named convertToNumber that takes in an object with at least one key/value pair, convert all the values to numbers.
+ *
+ * Examples
+ *
+ * convertToNumber({ piano: "200" }) ➞ { piano: 200 }
+ * convertToNumber({ piano: "200", tv: "300" }) ➞ { piano: 200, tv: 300 }
+ * convertToNumber({ piano: "200", tv: "300", stereo: "400" }) ➞ { piano: 200, tv: 300, stereo: 400 }
+ */
+
+
+/**
+ * Frequency Distribution
+ *
+ * Create a function named getFrequencies that returns the frequency distribution of an array. This function should return an object, where the keys are the unique elements and the values are the frequency in which those elements occur.
+ *
+ * Examples
+ *
+ * getFrequencies(["A", "B", "A", "A", "A"]) ➞ { A: 4, B: 1 }
+ * getFrequencies([1, 2, 3, 3, 2]) ➞ { "1": 1, "2": 2, "3": 2 }
+ * getFrequencies([true, false, true, false, false]) ➞ { true: 2, false: 3 }
+ * getFrequencies([]) ➞ {}
+ *
+ * Notes
+ * If given an empty array, return an empty object (see example #4).
+ * The object should be in the same order as in the input array.
+ */
+

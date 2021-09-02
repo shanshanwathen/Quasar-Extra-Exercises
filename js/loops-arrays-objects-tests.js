@@ -1,10 +1,9 @@
 const exampleString = "World";
 const exampleChars = ['a', 'b', 'c', 'd', 'e', 'f', 'r', 'h'];
-const randomChar = exampleChars[Math.ceil(Math.random() * 7)];
-const randomPositiveNumber = Math.ceil(Math.random() * 1022);
 const randomInteger = Math.ceil(Math.random() * 999);
+const randomNumber = Math.floor(Math.random() * 10);
 const exampleNumbersArr = [-12, -45, 87, 9.35, 54, 999, 36.97, -12, 9.35];
-const exampleArray = ['hello', 9, 43, 8, 'world', 'my', 4, 'watermelon'];
+const exampleNames = ['MUBASHIR', 'MATT', 'PAKISTAN', 'AIRFORCE', 'ROBBY', 'BILL GATES', 'YOU', 'JAMES', 'KENNETH', 'DOUGLAS'];
 
 
 
@@ -540,3 +539,138 @@ describe("makeTitle", function() {
 });
 
 // Online Shopping
+describe('freeShipping', function () {
+    it('should be a defined function', function () {
+        expect(typeof freeShipping).toBe('function');
+    });
+    it('should return a boolean when executed', function () {
+        expect(typeof freeShipping({ Monopoly: 11.99, Secret_Hitler: 35.99, Bananagrams: 13.99 })).toBe('boolean');
+    });
+    it('should return true when passed in {Flatscreen_TV: 399.99}', function () {
+        expect(freeShipping({Flatscreen_TV: 399.99})).toBe(true);
+    });
+    it('should return true when passed in {Monopoly: 11.99, Secret_Hitler: 35.99, Bananagrams: 13.99}', function () {
+        expect(freeShipping({Monopoly: 11.99, Secret_Hitler: 35.99, Bananagrams: 13.99})).toBe(true);
+    });
+    it('should return true when passed in {Elephant_Plushie: 40.55, Octopus_Plushie: 20.33, Spongebob_Plushie: 20.00}', function () {
+        expect(freeShipping({Elephant_Plushie: 40.55, Octopus_Plushie: 20.33, Spongebob_Plushie: 20.00})).toBe(true);
+    });
+    it('should return false when passed in {Shampoo: 5.99, Rubber_Ducks: 15.99}', function () {
+        expect(freeShipping({Shampoo: 5.99, Rubber_Ducks: 15.99})).toBe(false);
+    });
+    it('should return false when passed in {Scrabble: 12.32, Jenga: 5.55, Clue: 20.00}', function () {
+        expect(freeShipping({Scrabble: 12.32, Jenga: 5.55, Clue: 20.00})).toBe(false);
+    });
+});
+
+// How Good is Your Name?
+describe('nameScore', function () {
+    it('should be a defined function', function () {
+        expect(typeof nameScore).toBe('function');
+    });
+    it('should return a string when executed', function () {
+        expect(typeof nameScore(exampleNames[randomNumber])).toBe('string');
+    });
+    it('should return "THE BEST" when passed in "MUBASHIR"', function () {
+        expect(nameScore('MUBASHIR')).toBe("THE BEST");
+    });
+    it('should return "THE BEST" when passed in "MATT"', function () {
+        expect(nameScore('MATT')).toBe("THE BEST");
+    });
+    it('should return "THE BEST" when passed in "PAKISTAN"', function () {
+        expect(nameScore('PAKISTAN')).toBe("THE BEST");
+    });
+    it('should return "THE BEST" when passed in "AIRFORCE"', function () {
+        expect(nameScore('AIRFORCE')).toBe("THE BEST");
+    });
+    it('should return "THE BEST" when passed in "ROBBY"', function () {
+        expect(nameScore('ROBBY')).toBe("THE BEST");
+    });
+    it('should return "THE BEST" when passed in "BILL GATES"', function () {
+        expect(nameScore('BILL GATES')).toBe("THE BEST");
+    });
+    it('should return "VERY GOOD" when passed in "FABIO"', function () {
+        expect(nameScore('FABIO')).toBe("VERY GOOD");
+    });
+    it('should return "VERY GOOD" when passed in "YOU"', function () {
+        expect(nameScore('YOU')).toBe("VERY GOOD");
+    });
+    it('should return "PRETTY GOOD" when passed in "JLJ"', function () {
+        expect(nameScore('JLJ')).toBe("PRETTY GOOD");
+    });
+    it('should return "PRETTY GOOD" when passed in "BOB"', function () {
+        expect(nameScore('BOB')).toBe("PRETTY GOOD");
+    });
+    it('should return "PRETTY GOOD" when passed in "ME"', function () {
+        expect(nameScore('ME')).toBe("PRETTY GOOD");
+    });
+    it('should return "NOT TOO GOOD" when passed in "PUBG"', function () {
+        expect(nameScore('PUBG')).toBe("NOT TOO GOOD");
+    });
+    it('should return "NOT TOO GOOD" when passed in "GUV"', function () {
+        expect(nameScore('GUV')).toBe("NOT TOO GOOD");
+    });
+});
+
+
+// Burglary Series (06): Convert to Number
+describe('convertToNumber', function () {
+    it('should be a defined function', function () {
+        expect(typeof convertToNumber).toBe('function');
+    });
+    it('should not return an array when executed', function () {
+        expect(Array.isArray(convertToNumber({piano: "200", tv: "100", stereo: "400" }))).not.toBe(true);
+    });
+    it('should not return null when executed', function () {
+        expect(convertToNumber({piano: "200", tv: "100", stereo: "400" })).not.toBeNull();
+    });
+    it('should return an object when executed', function () {
+        expect(typeof convertToNumber({piano: "200", tv: "100", stereo: "400" })).toBe('object');
+    });
+    it('should return { piano: 200, tv: 100, stereo: 400 } when passed in { piano: "200", tv: "100", stereo: "400" }', function () {
+        expect(convertToNumer({piano: "200", tv: "100", stereo: "400" })).toEqual({ piano: 200, tv: 100, stereo: 400 });
+    });
+    it('should return {piano: 200, tv: 300, stereo: 400} when passed in {piano: "200", tv: "300", stereo: "400" }', function () {
+        expect(convertToNumer({piano: "200", tv: "300", stereo: "400" })).toEqual({piano: 200, tv: 300, stereo: 400});
+    });
+    it('should return {piano: 200, tv: 300 } when passed in {piano: "200", tv: "300" }', function () {
+        expect(convertToNumer({piano: "200", tv: "300" })).toEqual({piano: 200, tv: 300 });
+    });
+    it('should return {piano: 200} when passed in {piano: "200"}', function () {
+        expect(convertToNumber({piano: "200"})).toEqual({piano: 200});
+    });
+});
+
+// Frequency Distribution
+describe('getFrequencies', function () {
+    it('should be a defined function', function () {
+        expect(typeof getFrequencies).toEqual('function');
+    });
+    it('should not return an array when executed', function () {
+        expect(Array.isArray(getFrequencies(['A', 'A']))).not.toBe(true)
+    });
+    it('should not return null when executed', function () {
+        expect(getFrequencies(['A', 'A'])).not.toBeNull();
+    });
+    it('should return an object when executed', function () {
+        expect(typeof getFrequencies(['A', 'A'])).toBe('object');
+    });
+    it('should return {A: 2} when passed in [\'A\', \'A\']', function () {
+        expect(getFrequencies(['A', 'A'])).toEqual({A: 2});
+    });
+    it('should return {A: 4, B: 1} when passed in [\'A\', \'B\', \'A\', \'A\', \'A\']', function () {
+        expect(getFrequencies(['A', 'B', 'A', 'A', 'A'])).toEqual({A: 4, B: 1});
+    });
+    it('should return {A: 3, B: 1, C: 1} when passed in [\'A\', \'B\', \'C\', \'A\', \'A\']', function () {
+        expect(getFrequencies(['A', 'B', 'C', 'A', 'A'])).toEqual({A: 3, B: 1, C: 1});
+    });
+    it('should return {true: 2, false: 3} when passed in [true, false, true, false, false]', function () {
+        expect(getFrequencies([true, false, true, false, false])).toEqual({true: 2, false: 3});
+    });
+    it('should return {1: 1, 2: 2, 3: 2} when passed in [1, 2, 3, 3, 2]', function () {
+        expect(getFrequencies([1, 2, 3, 3, 2])).toEqual({1: 1, 2: 2, 3: 2});
+    });
+    it('should return {} when passed in []', function () {
+        expect(getFrequencies([])).toEqual({});
+    });
+});
